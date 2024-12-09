@@ -30,7 +30,7 @@ let package = Package(
         .binaryTarget(
             name: "TXSoundTouch",
             url: "https://liteav.sdk.qcloud.com/download/spm/12.2/professional/TXSoundTouch.xcframework.zip",
-            checksum: "3e7ebfed9f98840f7640fb632839e7f2018ed6fbbc6975a404986286baabe812"
+            checksum: "8d70e075253d49bf926befec4da567676654840a545eb4284669131d9c91d24e"
         ),
         .target(
             name: "Professional_SwiftPM",
