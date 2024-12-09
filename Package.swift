@@ -20,17 +20,17 @@ let package = Package(
         .binaryTarget(
             name: "TXLiteAVSDK_Professional",
             url: "https://liteav.sdk.qcloud.com/download/spm/12.2/professional/TXLiteAVSDK_Professional.xcframework.zip",
-            checksum: "c07f6a61c3fe6b8e5bcedc4314b22ee370beae8f4df4609c5e415ccbc4d2c464"
+            checksum: "b6fc348b5bfc3482c49c35f0c24f61803f2f7ffba4a3fc2bda00f3ce69a94fbe"
          ),
         .binaryTarget(
             name: "TXFFmpeg",
             url: "https://liteav.sdk.qcloud.com/download/spm/12.2/professional/TXFFmpeg.xcframework.zip",
-            checksum: "9f75e822f6865710095822b44b31d0f2b4b8e442c712b4c60735aa5a2a2501d1"
+            checksum: "fcb9e1e920c96ad70dd1463618db952028f47e21927266771db6476e61b6d644"
         ),
         .binaryTarget(
             name: "TXSoundTouch",
             url: "https://liteav.sdk.qcloud.com/download/spm/12.2/professional/TXSoundTouch.xcframework.zip",
-            checksum: "3e7ebfed9f98840f7640fb632839e7f2018ed6fbbc6975a404986286baabe812"
+            checksum: "f8ca1d87e2d3dc227c45969901b7cee37d69ff0a0951a5b232cae0287ddedf1e"
         ),
         .target(
             name: "Professional_SwiftPM",
