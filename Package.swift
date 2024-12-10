@@ -19,18 +19,18 @@ let package = Package(
         // Targets can depend on other targets in this package and products from dependencies.
         .binaryTarget(
             name: "TXLiteAVSDK_Professional",
-            url: "https://liteav.sdk.qcloud.com/download/spm/12.2/professional/TXLiteAVSDK_Professional.xcframework.zip",
-            checksum: "b6fc348b5bfc3482c49c35f0c24f61803f2f7ffba4a3fc2bda00f3ce69a94fbe"
+            url: "https://liteav.sdk.qcloud.com/download/spm/12.1/professional/TXLiteAVSDK_Professional.xcframework.zip",
+            checksum: "d7db1f255f4afe8d5e3543b052f9fa968545d970ca0e4a340642a26b9af07d8d"
          ),
         .binaryTarget(
             name: "TXFFmpeg",
-            url: "https://liteav.sdk.qcloud.com/download/spm/12.2/professional/TXFFmpeg.xcframework.zip",
-            checksum: "fcb9e1e920c96ad70dd1463618db952028f47e21927266771db6476e61b6d644"
+            url: "https://liteav.sdk.qcloud.com/download/spm/12.1/professional/TXFFmpeg.xcframework.zip",
+            checksum: "df4f222e8bdafb84591a71834752172a92ec780d3a3f23c2ca456e1c8cb6e214"
         ),
         .binaryTarget(
             name: "TXSoundTouch",
-            url: "https://liteav.sdk.qcloud.com/download/spm/12.2/professional/TXSoundTouch.xcframework.zip",
-            checksum: "f8ca1d87e2d3dc227c45969901b7cee37d69ff0a0951a5b232cae0287ddedf1e"
+            url: "https://liteav.sdk.qcloud.com/download/spm/12.1/professional/TXSoundTouch.xcframework.zip",
+            checksum: "46046e558a951bc079c8c293847eded85cc3f378ce95614dd6c4ef06dae1937e"
         ),
         .target(
             name: "Professional_SwiftPM",
