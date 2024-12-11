@@ -1,6 +1,7 @@
 // swift-tools-version: 6.0
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
+
 import PackageDescription
 
 let package = Package(
@@ -9,10 +10,13 @@ let package = Package(
         .iOS(.v12)
     ],
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "Professional_SwiftPM",
             targets: ["Professional_SwiftPM"]),
+        .library(
+            name: "TXLiteAVSDK_ReplayKit",
+            targets: ["TXLiteAVSDK_ReplayKit"]
+        )
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
@@ -21,7 +25,7 @@ let package = Package(
             name: "TXLiteAVSDK_Professional",
             url: "https://liteav.sdk.qcloud.com/download/spm/12.2/professional/TXLiteAVSDK_Professional.xcframework.zip",
             checksum: "cc70cb51a25ac36fecc76dc9e49821badb10deb2afa3d766401d9965b54561ae"
-         ),
+        ),
         .binaryTarget(
             name: "TXFFmpeg",
             url: "https://liteav.sdk.qcloud.com/download/spm/12.2/professional/TXFFmpeg.xcframework.zip",
@@ -32,15 +36,22 @@ let package = Package(
             url: "https://liteav.sdk.qcloud.com/download/spm/12.2/professional/TXSoundTouch.xcframework.zip",
             checksum: "8d70e075253d49bf926befec4da567676654840a545eb4284669131d9c91d24e"
         ),
+        .binaryTarget(
+            name: "TXLiteAVSDK_ReplayKitExt",
+            url: "https://liteav.sdk.qcloud.com/download/spm/12.2/professional/TXLiteAVSDK_ReplayKitExt.xcframework.zip",
+            checksum: "6735c24f1ae1a5acb75886b47eaa032ee4a99cd99fa0719638216721ddede152"
+        ),
         .target(
             name: "Professional_SwiftPM",
             dependencies: [
                 .target(name: "TXLiteAVSDK_Professional"),
                 .target(name: "TXFFmpeg"),
-                .target(name: "TXSoundTouch")
+                .target(name: "TXSoundTouch"),
             ],
             sources: ["Professional_SwiftPM.swift"],
             linkerSettings: [
+                .linkedFramework("ReplayKit"),
+                .linkedFramework("VideoToolbox"),
                 .linkedFramework("AVKit"),
                 .linkedFramework("GLKit"),
                 .linkedFramework("AssetsLibrary"),
@@ -57,6 +68,13 @@ let package = Package(
                 .linkedLibrary("c++"),
                 .linkedLibrary("resolv")
             ]
+        ),
+        .target(
+            name: "TXLiteAVSDK_ReplayKit",
+            dependencies: [
+                .target(name: "TXLiteAVSDK_ReplayKitExt")
+            ],
+            sources: ["TXLiteAVSDK_ReplayKit.swift"]
         )
     ]
 )
